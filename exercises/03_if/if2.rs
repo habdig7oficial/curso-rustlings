@@ -1,9 +1,14 @@
 // TODO: Fix the compiler error on this function.
+#[allow(unused_parens)]
 fn picky_eater(food: &str) -> &str {
     if food == "strawberry" {
         "Yummy!"
-    } else {
-        1
+    } 
+    else if (food == "potato"){
+      return "I guess I can eat that.";
+    }
+    else {
+        return "No thanks!";
     }
 }
 
