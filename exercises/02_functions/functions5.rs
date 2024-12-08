@@ -1,7 +1,6 @@
 // TODO: Fix the function body without changing the signature.
 fn square(num: i32) -> i32 {
-    num ** 2;
-    return num;
+    return i32::pow(num, 2);
 }
 
 fn main() {

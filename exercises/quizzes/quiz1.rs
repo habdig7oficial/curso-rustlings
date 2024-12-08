@@ -12,6 +12,17 @@
 // the quantity bought.
 // fn calculate_price_of_apples(???) -> ??? { ??? }
 
+#[allow(unused_parens)]
+#[allow(clippy::needless_return)]
+fn calculate_price_of_apples(apples_num: i32) -> i32 { 
+   if(apples_num > 40){
+     return apples_num;
+   }
+   else {
+     return apples_num * 2;
+   }
+}
+
 fn main() {
     // You can optionally experiment here.
 }
