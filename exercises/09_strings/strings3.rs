@@ -1,32 +1,49 @@
 #[allow(unused_parens)]
-fn trim_me(input: &str) -> &str {
+#[allow(clippy::needless_return)]
+fn trim_me(mut input: &str) -> &str {
     // TODO: Remove whitespace from both ends of a string.
-    let mut ptr: *const &str = &input;
     for i in input.chars().rev(){
        if(i == ' '){
-         println!("{:?}", ptr);
-        // ptr = ptr.wrapping_add(1);
-        ptr = ptr.wrapping_add(1);
-        let a: &str = *ptr;
-        println!("{}",a);
+         input = &input[0..input.len() - 1]
        }
        else {
+         println!("{}", input);
          break;
        }
        println!("{i}) ");
     }
+    
+    for i in input.chars(){
+       if(i == ' '){
+         input = &input[1..input.len()]
+       }
+       else {
+         println!("{}", input);
+         break;
+       }
+       println!("{i}) ");
+    }
+
     return input;
 }
 
+#[allow(clippy::needless_return)]
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There are multiple ways to do this.
-   return String::from("");
+   return String::from(input) + " world!";
 }
 
+#[allow(clippy::needless_return)]
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons".
+    /*
+    let myslice = input.split (' ');
     
-    return String::from("");
+    for i in myslice{
+      println!("{} a", i);
+    }
+*/
+    return String::from(input).replace("cars", "balloons");
 }
 
 fn main() {
