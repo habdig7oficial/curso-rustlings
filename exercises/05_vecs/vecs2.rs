@@ -4,6 +4,8 @@ fn vec_loop(input: &[i32]) -> Vec<i32> {
     for element in input {
         // TODO: Multiply each element in the `input` slice by 2 and push it to
         // the `output` vector.
+        
+        output.push(element * 2);
     }
 
     output
@@ -16,6 +18,7 @@ fn vec_map_example(input: &[i32]) -> Vec<i32> {
     input.iter().map(|element| element + 1).collect()
 }
 
+#[allow(clippy::needless_return)]
 fn vec_map(input: &[i32]) -> Vec<i32> {
     // TODO: Here, we also want to multiply each element in the `input` slice
     // by 2, but with iterator mapping instead of manually pushing into an empty
@@ -24,7 +27,7 @@ fn vec_map(input: &[i32]) -> Vec<i32> {
     input
         .iter()
         .map(|element| {
-            // ???
+            return element * 2;
         })
         .collect()
 }

@@ -1,6 +1,6 @@
 DON'T EDIT THIS FILE!
 
-vecs2
+move_semantics3
 
 intro1
 intro2
@@ -26,6 +26,14 @@ primitive_types4
 primitive_types5
 primitive_types6
 vecs1
+vecs2
+move_semantics1
+move_semantics2
 strings1
 strings2
 strings3
+strings4
+modules1
+modules2
+modules3
+hashmaps1
